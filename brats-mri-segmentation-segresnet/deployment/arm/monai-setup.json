@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.16.1.55165",
-      "templateHash": "145439240506238278"
+      "templateHash": "4654732485216948447"
     }
   },
   "parameters": {
@@ -18,10 +18,7 @@
     },
     "orchestratorRegion": {
       "type": "string",
-      "defaultValue": "[resourceGroup().location]",
-      "metadata": {
-        "description": "Region of the orchestrator (workspace, central storage and compute)."
-      }
+      "defaultValue": "[resourceGroup().location]"
     }
   },
   "resources": [

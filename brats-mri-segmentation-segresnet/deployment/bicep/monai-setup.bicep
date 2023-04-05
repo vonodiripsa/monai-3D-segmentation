@@ -1,5 +1,4 @@
-// This BICEP script will fully provision a functional federated learning sandbox
-// based on simple internal silos secured with only Managed Identities.
+// This BICEP script will fully provision MONAI sandbox
 
 // Usage (sh):
 // > az login
@@ -20,7 +19,7 @@ param demoBaseName string = 'MONAI-3D'
 // @description('Type of identity to use for permissions model')
 // param identityType string = 'UserAssigned'
 
-@description('Region of the orchestrator (workspace, central storage and compute).')
+// @description('Region of the orchestrator (workspace, central storage and compute).')
 param orchestratorRegion string = resourceGroup().location
 
 // Create Azure Machine Learning workspace
