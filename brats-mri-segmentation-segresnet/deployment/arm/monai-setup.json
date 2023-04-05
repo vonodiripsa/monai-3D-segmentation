@@ -5,20 +5,23 @@
     "_generator": {
       "name": "bicep",
       "version": "0.16.1.55165",
-      "templateHash": "6095982789244001216"
+      "templateHash": "17039956673490319341"
     }
   },
   "parameters": {
     "demoBaseName": {
       "type": "string",
-      "defaultValue": "MONAI-3D",
+      "defaultValue": "monai-3d",
       "metadata": {
         "description": "Base name of the demo, used for creating all resources as prefix"
       }
     },
     "workspaceRegion": {
       "type": "string",
-      "defaultValue": "[resourceGroup().location]"
+      "defaultValue": "[resourceGroup().location]",
+      "metadata": {
+        "description": "Region of the workspace, central storage and compute."
+      }
     }
   },
   "resources": [
@@ -42,7 +45,7 @@
             "value": "[format('aml-{0}', parameters('demoBaseName'))]"
           },
           "machineLearningFriendlyName": {
-            "value": "MONAI WS"
+            "value": "monai ws"
           },
           "machineLearningDescription": {
             "value": "Azure ML MONAI demo workspace (use for dev purpose only)"
