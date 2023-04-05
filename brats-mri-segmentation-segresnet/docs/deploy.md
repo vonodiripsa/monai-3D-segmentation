@@ -5,6 +5,8 @@ In this tutorial, you will:
 * Provision a fully functional environment in your own Azure subscription
 * Run a sample of MONAI machine learning pipeline in Azure ML
 
+it is based on the following MONAI tutorial: https://github.com/Project-MONAI/tutorials/blob/main/3d_segmentation/brats_segmentation_3d.ipynb
+
 ## Prerequisites
 
 To enjoy this quick deployment, you will need to:

@@ -4,14 +4,14 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.15.31.15270",
-      "templateHash": "15716144577166899044"
+      "version": "0.16.1.55165",
+      "templateHash": "145439240506238278"
     }
   },
   "parameters": {
     "demoBaseName": {
       "type": "string",
-      "defaultValue": "ams-mdemo",
+      "defaultValue": "MONAI-3D",
       "metadata": {
         "description": "Base name of the demo, used for creating all resources as prefix"
       }
@@ -22,25 +22,12 @@
       "metadata": {
         "description": "Region of the orchestrator (workspace, central storage and compute)."
       }
-    },
-    "tags": {
-      "type": "object",
-      "defaultValue": {
-        "Owner": "AzureML Samples",
-        "Project": "azure-ml-federated-learning",
-        "Environment": "dev",
-        "Toolkit": "bicep",
-        "Docs": "https://github.com/Azure-Samples/azure-ml-federated-learning"
-      },
-      "metadata": {
-        "description": "Tags to curate the resources in Azure."
-      }
     }
   },
   "resources": [
     {
       "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2020-10-01",
+      "apiVersion": "2022-09-01",
       "name": "[format('{0}-aml-{1}', parameters('demoBaseName'), parameters('orchestratorRegion'))]",
       "properties": {
         "expressionEvaluationOptions": {
@@ -58,16 +45,13 @@
             "value": "[format('aml-{0}', parameters('demoBaseName'))]"
           },
           "machineLearningFriendlyName": {
-            "value": "Monai WS"
+            "value": "MONAI WS"
           },
           "machineLearningDescription": {
-            "value": "Azure ML demo workspace for federated learning (use for dev purpose only)"
+            "value": "Azure ML MONAI demo workspace (use for dev purpose only)"
           },
           "location": {
             "value": "[parameters('orchestratorRegion')]"
-          },
-          "tags": {
-            "value": "[parameters('tags')]"
           }
         },
         "template": {
@@ -76,8 +60,8 @@
           "metadata": {
             "_generator": {
               "name": "bicep",
-              "version": "0.15.31.15270",
-              "templateHash": "12751024727625132328"
+              "version": "0.16.1.55165",
+              "templateHash": "7386477528569159203"
             }
           },
           "parameters": {
