@@ -20,11 +20,11 @@ param demoBaseName string = 'MONAI-3D'
 // param identityType string = 'UserAssigned'
 
 // @description('Region of the orchestrator (workspace, central storage and compute).')
-param orchestratorRegion string = resourceGroup().location
+param workspaceRegion string = resourceGroup().location
 
 // Create Azure Machine Learning workspace
 module workspace './modules/azureml/open_azureml_workspace.bicep' = {
-  name: '${demoBaseName}-aml-${orchestratorRegion}'
+  name: '${demoBaseName}-aml-${workspaceRegion}'
   scope: resourceGroup()
   params: {
     defaultComputeName: 'monai-cluster'
@@ -32,7 +32,7 @@ module workspace './modules/azureml/open_azureml_workspace.bicep' = {
     machineLearningName: 'aml-${demoBaseName}'
     machineLearningFriendlyName: 'MONAI WS'
     machineLearningDescription: 'Azure ML MONAI demo workspace (use for dev purpose only)'
-    location: orchestratorRegion
+    location: workspaceRegion
   }
 }
 

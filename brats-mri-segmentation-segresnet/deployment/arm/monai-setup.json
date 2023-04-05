@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.16.1.55165",
-      "templateHash": "4654732485216948447"
+      "templateHash": "6095982789244001216"
     }
   },
   "parameters": {
@@ -16,7 +16,7 @@
         "description": "Base name of the demo, used for creating all resources as prefix"
       }
     },
-    "orchestratorRegion": {
+    "workspaceRegion": {
       "type": "string",
       "defaultValue": "[resourceGroup().location]"
     }
@@ -25,7 +25,7 @@
     {
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2022-09-01",
-      "name": "[format('{0}-aml-{1}', parameters('demoBaseName'), parameters('orchestratorRegion'))]",
+      "name": "[format('{0}-aml-{1}', parameters('demoBaseName'), parameters('workspaceRegion'))]",
       "properties": {
         "expressionEvaluationOptions": {
           "scope": "inner"
@@ -48,7 +48,7 @@
             "value": "Azure ML MONAI demo workspace (use for dev purpose only)"
           },
           "location": {
-            "value": "[parameters('orchestratorRegion')]"
+            "value": "[parameters('workspaceRegion')]"
           }
         },
         "template": {
