@@ -70,9 +70,8 @@ Notes:
 5.  Once you have your compute instance running. Click Notebooks and
     Terminal icon.
 
-![Shape, rectangle Description automatically
-generated](media/image1.png){width="5.297758092738408in"
-height="1.3452734033245843in"}
+<img src="media/image1.png" alt="Shape, rectangle Description automatically
+generated" style="zoom:50%;" />
 
 After that you need to clone the repository to have the latest code in
 your workspace.
@@ -95,8 +94,8 @@ your workspace.
 
 1.  To run the tutorial, you need to go open the first notebook
 
-![Graphical user interface, application Description automatically
-generated](media/image2.png){width="5.374305555555556in" height="9.0in"}
+<img src="media/image2.png" alt="Graphical user interface, application Description automatically
+generated" style="zoom:50%;" />
 
 2.  Make sure your compute instance is still running.
 
@@ -109,15 +108,13 @@ generated](media/image2.png){width="5.374305555555556in" height="9.0in"}
 1.  In the open 1.load-train-model notebook correct tar_location value
     using your data asset url
 
-![Graphical user interface, application Description automatically
-generated](media/image3.png){width="6.5in"
-height="1.9361111111111111in"}
+<img src="media/image3.png" alt="Graphical user interface, application Description automatically
+generated" style="zoom:50%;" />
 
 2.  Make sure you select SDK v2 Python kernel .
 
-> ![Graphical user interface, text Description automatically
-> generated](media/image4.png){width="6.5in"
-> height="1.8020833333333333in"}
+> <img src="media/image4.png" alt="Graphical user interface, text Description automatically
+> generated" style="zoom:50%;" />
 
 3.  Start running the notebook step by step.
 
