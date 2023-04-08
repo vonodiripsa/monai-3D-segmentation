@@ -111,7 +111,7 @@ generated" style="zoom:50%;" />
 <img src="media/image3.png" alt="Graphical user interface, application Description automatically
 generated" width="75%" />
 
-2.  Make sure you select SDK v2 Python kernel .
+2.  Make sure you select Python 3.10 SDK v2 kernel .
 
 > <img src="media/image4.png" alt="Graphical user interface, text Description automatically
 > generated" width="75%" />
