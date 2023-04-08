@@ -70,8 +70,8 @@ Notes:
 5.  Once you have your compute instance running. Click Notebooks and
     Terminal icon.
 
-<img src="media/image1.png" alt="Shape, rectangle Description automatically
-generated" style="zoom:50%;" />
+<img src="media/image1.png" width="50%" />
+
 
 After that you need to clone the repository to have the latest code in
 your workspace.
@@ -109,12 +109,12 @@ generated" style="zoom:50%;" />
     using your data asset url
 
 <img src="media/image3.png" alt="Graphical user interface, application Description automatically
-generated" style="zoom:50%;" />
+generated" width="75%" />
 
 2.  Make sure you select SDK v2 Python kernel .
 
 > <img src="media/image4.png" alt="Graphical user interface, text Description automatically
-> generated" style="zoom:50%;" />
+> generated" width="75%" />
 
 3.  Start running the notebook step by step.
 
