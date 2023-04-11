@@ -102,7 +102,7 @@ generated](media/image3.png){width="6.5in"
 
 5.  You don't need to run it again on the same compute instance.
 
-Shortly about the notebook steps.
+> **Notebook steps definition**
 
 In the notebook we are following MONAI tutorial and using Azure ML
 components to run it. After installing required libraries and importing
@@ -138,19 +138,19 @@ After setting required parameters we are creating and submitting the
 segmentation pipeline. After it finishes it will create the result model
 like the one saved in ginthub.
 
-**Running the notebook.**
-
-You can run all cells. If for some reason it fails you could rerun
-failed steps or use Azure ML to fix problems. For example, if it fails
-during environment building you can rebuild it using Environments
-window.
-
-If some steps of the pipeline fail you can open Pipelines window and
-check logs for the whole pipeline or different steps/components. Just
-double-click failed step and Use Outputs + logs.
-
-By the way, the result model will be saved together with other outputs
-in model folder
+> **NOTES:**
+>
+>You can run all cells. If for some reason it fails you could rerun
+>failed steps or use Azure ML to fix problems. For example, if it fails
+>during environment building you can rebuild it using Environments
+>window.
+>
+>If some steps of the pipeline fail you can open Pipelines window and
+>check logs for the whole pipeline or different steps/components. Just
+>double-click failed step and Use Outputs + logs.
+>
+>By the way, the result model will be saved together with other outputs
+>in model folder
 
 ![Graphical user interface, application Description automatically
 generated](media/image6.png){width="4.142965879265092in"
