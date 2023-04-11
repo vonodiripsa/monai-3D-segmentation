@@ -1,0 +1,23 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandComponent.schema.json
+name: load_data_from_kaggle
+version: 0.3.0
+display_name: Download dataset
+type: command
+description: Component that downloads the dataset from Kaggle
+is_deterministic: true
+
+inputs:
+  kaggle_dataset:
+    type: string
+    description: the input kaggle dataset
+  data_folder:
+    type: uri_folder
+    description: the output folder where the data will be written    
+
+code: .
+
+command: >-
+  python run.py --kaggle_dataset ${{inputs.kaggle_dataset}} --image_data_folder ${{inputs.data_folder}}
+environment: 
+  conda_file: ./conda.yaml
+  image: mcr.microsoft.com/azureml/openmpi4.1.0-cuda11.1-cudnn8-ubuntu20.04
