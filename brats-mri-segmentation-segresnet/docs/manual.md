@@ -1,54 +1,33 @@
-**MONAI installation and running**
+# Run MONAI Azure ML Tutorial
 
-**Motivation**
+In this tutorial, you will:
 
-**Introduction**
+* Provision a fully functional environment in your own Azure subscription
+* Run a sample of MONAI machine learning pipeline in Azure ML
 
-**Prerequisites**
+it is based on the following MONAI tutorial: https://github.com/Project-MONAI/tutorials/blob/main/3d_segmentation/brats_segmentation_3d.ipynb
 
-To run the test, you will need to:
+## Prerequisites
 
--   have an active [[Azure
-    subscription]{.underline}](https://azure.microsoft.com/) that you
-    can use for development purposes,
+To enjoy this quick deployment, you will need to:
 
--   have permissions to create resources, set permissions, and create
-    identities in this subscription (or at least in one resource group),
+* have an active [Azure subscription](https://azure.microsoft.com) that you can use for development purposes,
+* have permissions to create resources, set permissions, and create identities in this subscription (or at least in one resource group),
+  * Note that to set permissions, you typically need _Owner_ role in the subscription or resource group - _Contributor_ role is not enough. This is key for being able to _secure_ the setup.
+* [install the Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli).
 
-    -   Note that to set permissions, you typically need *Owner* role in
-        the subscription or resource group - *Contributor* role is not
-        enough. This is key for being able to *secure* the setup.
+## Deploy to Azure
 
--   [[install the Azure
-    CLI]{.underline}](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli).
+1. Click on the button below. It will open in Azure Portal a page to deploy the resources in your subscription.
 
-**Installation**
+| Button | Description |
+| :-- | :-- |
+| [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fvonodiripsa%2Fmonai-3D-segmentation%2Fmain%2Fbrats-mri-segmentation-segresnet%2Fdeployment%2Farm%2Fmonai-setup.json) | This setup is intended only for demo purposes. The data is still accessible by the users of your subscription when opening the storage accounts, and data exfiltration is possible. |
 
-1.  Click on the button below. It will open in Azure Portal a page to
-    deploy the resources in your subscription.
-
-  ---------------------------------------------------------------------------
-  **Button**   **Description**
-  ------------ --------------------------------------------------------------
-               This setup is intended only for demo purposes. The data is
-               still accessible by the users of your subscription when
-               opening the storage accounts, and data exfiltration is
-               possible.
-
-  ---------------------------------------------------------------------------
-
-Notes:
-
--   If someone already provisioned a demo with the same name in your
-    subscription, change **Demo Base Name** parameter to a unique value.
-
--   For provisioning GPU or CPU, you need just use a GPU/CPU SKU value
-    for the \"Compute SKU\" parameter, Standard_NC96ads_A100 for
-    instance. An overview of the GPU SKU\'s available in Azure can be
-    found [[here]{.underline}](https://learn.microsoft.com/en-us/azure/virtual-machines/sizes-gpu).
-    Beware though, SKU availability may vary depending on the region you
-    choose, so you may have to use different Azure regions instead of
-    the default ones.
+> Notes:
+>
+> * If someone already provisioned a demo with the same name in your subscription, change **Demo Base Name** parameter to a unique value.
+> * For provisioning GPU or CPU, you need just use a GPU/CPU SKU value for the "Compute SKU" parameter, `Standard_NC96ads_A100` for instance. An overview of the GPU SKU's available in Azure can be found [here](https://learn.microsoft.com/en-us/azure/virtual-machines/sizes-gpu). Beware though, SKU availability may vary depending on the region you choose, so you may have to use different Azure regions instead of the default ones.
 
 2.  Once the automatic deployment is finished you can open new workspace
     and after that related Machine Learning Studio
@@ -90,7 +69,7 @@ your workspace.
     asset](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-create-data-assets?view=azureml-api-2&tabs=Studio)
     (file type) using "From Azure storage" option.
 
-**Running**
+## Running 1.load-train-model.ipynb 
 
 1.  To run the tutorial, you need to go open the first notebook
 
@@ -123,7 +102,7 @@ generated](media/image3.png){width="6.5in"
 
 5.  You don't need to run it again on the same compute instance.
 
-Shortly about the notebook steps.
+> **Notebook steps definition**
 
 In the notebook we are following MONAI tutorial and using Azure ML
 components to run it. After installing required libraries and importing
@@ -139,9 +118,7 @@ transforms for training and validation.
 In the next cell you can view the image. Currently it supported only
 under VSCode. The image will look like this.
 
-![A screenshot of a computer Description automatically generated with
-medium confidence](media/image5.png){width="6.5in"
-height="5.315972222222222in"}
+<img src="media/image5.png" width="75%" />
 
 In the next section we are assigning Compute instance to MLClient. If we
 already have it running it will just assign it or create a new one and
@@ -159,20 +136,19 @@ After setting required parameters we are creating and submitting the
 segmentation pipeline. After it finishes it will create the result model
 like the one saved in ginthub.
 
-**Running the notebook.**
+> **NOTES:**
+>
+>You can run all cells. If for some reason it fails you could rerun
+>failed steps or use Azure ML to fix problems. For example, if it fails
+>during environment building you can rebuild it using Environments
+>window.
+>
+>If some steps of the pipeline fail you can open Pipelines window and
+>check logs for the whole pipeline or different steps/components. Just
+>double-click failed step and Use Outputs + logs.
+>
+>By the way, the result model will be saved together with other outputs
+>in model folder
 
-You can run all cells. If for some reason it fails you could rerun
-failed steps or use Azure ML to fix problems. For example, if it fails
-during environment building you can rebuild it using Environments
-window.
+<img src="media/image6.png" width="75%" />
 
-If some steps of the pipeline fail you can open Pipelines window and
-check logs for the whole pipeline or different steps/components. Just
-double-click failed step and Use Outputs + logs.
-
-By the way, the result model will be saved together with other outputs
-in model folder
-
-![Graphical user interface, application Description automatically
-generated](media/image6.png){width="4.142965879265092in"
-height="6.46445428696413in"}
