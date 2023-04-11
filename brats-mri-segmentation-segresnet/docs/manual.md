@@ -1,10 +1,10 @@
-## 						**MONAI installation and running**
+**MONAI installation and running**
 
-#### **Motivation**
+**Motivation**
 
-#### **Introduction**
+**Introduction**
 
-#### **Prerequisites**
+**Prerequisites**
 
 To run the test, you will need to:
 
@@ -22,20 +22,20 @@ To run the test, you will need to:
 -   [[install the Azure
     CLI]{.underline}](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli).
 
-#### **Installation**
+**Installation**
 
 1.  Click on the button below. It will open in Azure Portal a page to
     deploy the resources in your subscription.
 
----------------------------------------------------------------------------
+  ---------------------------------------------------------------------------
   **Button**   **Description**
------------- --------------------------------------------------------------
+  ------------ --------------------------------------------------------------
                This setup is intended only for demo purposes. The data is
                still accessible by the users of your subscription when
                opening the storage accounts, and data exfiltration is
                possible.
 
----------------------------------------------------------------------------
+  ---------------------------------------------------------------------------
 
 Notes:
 
@@ -108,10 +108,10 @@ generated" style="zoom:50%;" />
 1.  In the open 1.load-train-model notebook correct tar_location value
     using your data asset url
 
-<img src="media/image3.png" alt="Graphical user interface, application Description automatically
-generated" width="75%" />
+![Graphical user interface, application Description automatically
+generated](media/image3.png){width="6.5in"
 
-2.  Make sure you select Python 3.10 SDK v2 kernel .
+2.  Make sure you select SDK v2 Python kernel .
 
 > <img src="media/image4.png" alt="Graphical user interface, text Description automatically
 > generated" width="75%" />
@@ -119,6 +119,60 @@ generated" width="75%" />
 3.  Start running the notebook step by step.
 
 4.  The first step (on the previous image) will install required
-    libraries on the compute instance
+    libraries on the compute instance.
 
-**Troubleshooting**
+5.  You don't need to run it again on the same compute instance.
+
+Shortly about the notebook steps.
+
+In the notebook we are following MONAI tutorial and using Azure ML
+components to run it. After installing required libraries and importing
+them in the notebook we are setting names and references to existing
+data (training dataset from AzureML workspace data asset and validation
+and visualization samples from tutorial github.
+
+Next, we are creating MLClient using default crepdentials and workspace
+parameters from config json file. After that we convert the
+multi-classes labels into multi-labels segmentation task and setup
+transforms for training and validation.
+
+In the next cell you can view the image. Currently it supported only
+under VSCode. The image will look like this.
+
+![A screenshot of a computer Description automatically generated with
+medium confidence](media/image5.png){width="6.5in"
+height="5.315972222222222in"}
+
+In the next section we are assigning Compute instance to MLClient. If we
+already have it running it will just assign it or create a new one and
+assign.
+
+In the next step we are creating or just assigning previously created
+Azure ML environment to run training pipeline. Yml specification of the
+environment is in train-env.yml file under notebooks folder.
+
+The notebook is based on Azure ML SDK 2. To demonstrate power of new
+components and pipelines in the next steps we are loading upload and
+train components created by related yml files in components folder.
+
+After setting required parameters we are creating and submitting the
+segmentation pipeline. After it finishes it will create the result model
+like the one saved in ginthub.
+
+**Running the notebook.**
+
+You can run all cells. If for some reason it fails you could rerun
+failed steps or use Azure ML to fix problems. For example, if it fails
+during environment building you can rebuild it using Environments
+window.
+
+If some steps of the pipeline fail you can open Pipelines window and
+check logs for the whole pipeline or different steps/components. Just
+double-click failed step and Use Outputs + logs.
+
+By the way, the result model will be saved together with other outputs
+in model folder
+
+![Graphical user interface, application Description automatically
+generated](media/image6.png){width="4.142965879265092in"
+height="6.46445428696413in"}
