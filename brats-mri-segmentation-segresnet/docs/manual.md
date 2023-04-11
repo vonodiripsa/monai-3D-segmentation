@@ -153,3 +153,42 @@ like the one saved in ginthub.
 <img src="media/image6.png" alt="Graphical user interface, application Description automatically
 generated" width="35%" height="35%"  />
 
+**Running Model Deployment**
+
+As prerequisites you have to successfully finish
+1.load-train-model.ipynb notebook.
+
+1.  Using Azure ML UI register best trained model generated in outputs
+    by 1.load-train-model.ipynb notebook. To do that select Model in
+    Azure ML vertical menu and select "+Register" and "From local
+    files".
+
+2.  After that just follow the wizard
+
+<img src="media/image7.png" alt="Graphical user interface, application Description automatically
+generated" width="50%" height="50%"  />
+
+<img src="media/image8.png" alt="Graphical user interface, application Description automatically
+generated" width="50%" height="50%"  />
+
+<img src="media/image9.png" alt="Graphical user interface, application Description automatically
+generated" width="50%" height="50%"  />
+
+3.  Open 2.deploy-model.ipynb notebook and run all cells.
+
+**Notebook steps definition**
+
+Import required libraries. Create MLClient. Specify global variable.
+
+Load previously registered model (latest version).
+
+Create online End Point.
+
+Create inference scoring environment based on scoring-env.yaml
+
+Deploy the new Endpoint. This operation will take long time. Make sure
+it is performed with specified timeout and using score.py
+
+Assign 100% of Endpoint traffic to the notebook deployment.
+
+
