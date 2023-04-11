@@ -18,9 +18,7 @@ To enjoy this quick deployment, you will need to:
 
 ## Deploy demo resources in Azure
 
-### One click ARM deployment
-
-Click on the button below. It will open in Azure Portal a page to deploy the resources in your subscription.
+1. Click on the button below. It will open in Azure Portal a page to deploy the resources in your subscription.
 
 | Button | Description |
 | :-- | :-- |
