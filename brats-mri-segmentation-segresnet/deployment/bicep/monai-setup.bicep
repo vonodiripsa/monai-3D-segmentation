@@ -1,4 +1,4 @@
-// This BICEP script will fully provision MONAI sandbox
+// This BICEP script will do simple provisioning of MONAI tutorial workspace
 
 // Usage (sh):
 // > az login
@@ -13,11 +13,6 @@ targetScope = 'resourceGroup'
 // please specify the base name for all resources
 @description('Base name of the demo, used for creating all resources as prefix')
 param demoBaseName string = 'monai-3d'
-
-// below parameters are optionals and have default values
-// @allowed(['UserAssigned','SystemAssigned'])
-// @description('Type of identity to use for permissions model')
-// param identityType string = 'UserAssigned'
 
 @description('Region of the workspace, central storage and compute.')
 param workspaceRegion string = resourceGroup().location
