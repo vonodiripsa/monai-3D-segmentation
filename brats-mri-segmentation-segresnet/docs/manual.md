@@ -201,5 +201,5 @@ The notebook logic is self-documentes. It sends a request to Azure ML Endpoint w
 gets and visualize a responce demonstrating good match with ground truth segmentation 
 
 <img src="media/image10.png" alt="Graphical user interface, application Description automatically
-generated" width="50%" height="50%"  />
+generated" width="75%" height="75%"  />
 
