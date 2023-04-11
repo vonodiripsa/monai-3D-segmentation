@@ -16,7 +16,7 @@ To enjoy this quick deployment, you will need to:
   * Note that to set permissions, you typically need _Owner_ role in the subscription or resource group - _Contributor_ role is not enough. This is key for being able to _secure_ the setup.
 * [install the Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli).
 
-## Deploy demo resources in Azure
+## Deploy to Azure
 
 1. Click on the button below. It will open in Azure Portal a page to deploy the resources in your subscription.
 
@@ -69,7 +69,7 @@ your workspace.
     asset](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-create-data-assets?view=azureml-api-2&tabs=Studio)
     (file type) using "From Azure storage" option.
 
-**Running**
+## Running the tutorial 
 
 1.  To run the tutorial, you need to go open the first notebook
 
