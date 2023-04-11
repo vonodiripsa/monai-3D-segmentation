@@ -1,54 +1,35 @@
-**MONAI installation and running**
+# Run the MONAI Demo
 
-**Motivation**
+In this tutorial, you will:
 
-**Introduction**
+* Provision a fully functional environment in your own Azure subscription
+* Run a sample of MONAI machine learning pipeline in Azure ML
 
-**Prerequisites**
+it is based on the following MONAI tutorial: https://github.com/Project-MONAI/tutorials/blob/main/3d_segmentation/brats_segmentation_3d.ipynb
 
-To run the test, you will need to:
+## Prerequisites
 
--   have an active [[Azure
-    subscription]{.underline}](https://azure.microsoft.com/) that you
-    can use for development purposes,
+To enjoy this quick deployment, you will need to:
 
--   have permissions to create resources, set permissions, and create
-    identities in this subscription (or at least in one resource group),
+* have an active [Azure subscription](https://azure.microsoft.com) that you can use for development purposes,
+* have permissions to create resources, set permissions, and create identities in this subscription (or at least in one resource group),
+  * Note that to set permissions, you typically need _Owner_ role in the subscription or resource group - _Contributor_ role is not enough. This is key for being able to _secure_ the setup.
+* [install the Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli).
 
-    -   Note that to set permissions, you typically need *Owner* role in
-        the subscription or resource group - *Contributor* role is not
-        enough. This is key for being able to *secure* the setup.
+## Deploy demo resources in Azure
 
--   [[install the Azure
-    CLI]{.underline}](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli).
+### One click ARM deployment
 
-**Installation**
+Click on the button below. It will open in Azure Portal a page to deploy the resources in your subscription.
 
-1.  Click on the button below. It will open in Azure Portal a page to
-    deploy the resources in your subscription.
+| Button | Description |
+| :-- | :-- |
+| [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fvonodiripsa%2Fmonai-3D-segmentation%2Fmain%2Fbrats-mri-segmentation-segresnet%2Fdeployment%2Farm%2Fmonai-setup.json) | This setup is intended only for demo purposes. The data is still accessible by the users of your subscription when opening the storage accounts, and data exfiltration is possible. |
 
-  ---------------------------------------------------------------------------
-  **Button**   **Description**
-  ------------ --------------------------------------------------------------
-               This setup is intended only for demo purposes. The data is
-               still accessible by the users of your subscription when
-               opening the storage accounts, and data exfiltration is
-               possible.
-
-  ---------------------------------------------------------------------------
-
-Notes:
-
--   If someone already provisioned a demo with the same name in your
-    subscription, change **Demo Base Name** parameter to a unique value.
-
--   For provisioning GPU or CPU, you need just use a GPU/CPU SKU value
-    for the \"Compute SKU\" parameter, Standard_NC96ads_A100 for
-    instance. An overview of the GPU SKU\'s available in Azure can be
-    found [[here]{.underline}](https://learn.microsoft.com/en-us/azure/virtual-machines/sizes-gpu).
-    Beware though, SKU availability may vary depending on the region you
-    choose, so you may have to use different Azure regions instead of
-    the default ones.
+> Notes:
+>
+> * If someone already provisioned a demo with the same name in your subscription, change **Demo Base Name** parameter to a unique value.
+> * For provisioning GPU or CPU, you need just use a GPU/CPU SKU value for the "Compute SKU" parameter, `Standard_NC96ads_A100` for instance. An overview of the GPU SKU's available in Azure can be found [here](https://learn.microsoft.com/en-us/azure/virtual-machines/sizes-gpu). Beware though, SKU availability may vary depending on the region you choose, so you may have to use different Azure regions instead of the default ones.
 
 2.  Once the automatic deployment is finished you can open new workspace
     and after that related Machine Learning Studio
