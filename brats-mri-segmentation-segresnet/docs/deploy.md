@@ -1,4 +1,4 @@
-# Run the MONAI Demo
+# Run the MONAI Tutorial on Azure ML
 
 In this tutorial, you will:
 
