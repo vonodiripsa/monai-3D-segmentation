@@ -118,9 +118,7 @@ transforms for training and validation.
 In the next cell you can view the image. Currently it supported only
 under VSCode. The image will look like this.
 
-![A screenshot of a computer Description automatically generated with
-medium confidence](media/image5.png){width="6.5in"
-height="5.315972222222222in"}
+<img src="media/image5.png" width="75%" />
 
 In the next section we are assigning Compute instance to MLClient. If we
 already have it running it will just assign it or create a new one and
@@ -152,6 +150,5 @@ like the one saved in ginthub.
 >By the way, the result model will be saved together with other outputs
 >in model folder
 
-![Graphical user interface, application Description automatically
-generated](media/image6.png){width="4.142965879265092in"
-height="6.46445428696413in"}
+<img src="media/image6.png" width="75%" />
+
