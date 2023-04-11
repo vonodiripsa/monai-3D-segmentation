@@ -153,7 +153,7 @@ like the one saved in ginthub.
 <img src="media/image6.png" alt="Graphical user interface, application Description automatically
 generated" width="35%" height="35%"  />
 
-**Running Model Deployment**
+## Running 2.deploy-model.ipynb 
 
 As prerequisites you have to successfully finish
 1.load-train-model.ipynb notebook.
@@ -166,13 +166,13 @@ As prerequisites you have to successfully finish
 2.  After that just follow the wizard
 
 <img src="media/image7.png" alt="Graphical user interface, application Description automatically
-generated" width="50%" height="50%"  />
+generated" width="75%" height="75%"  />
 
 <img src="media/image8.png" alt="Graphical user interface, application Description automatically
-generated" width="50%" height="50%"  />
+generated" width="75%" height="75%"  />
 
 <img src="media/image9.png" alt="Graphical user interface, application Description automatically
-generated" width="50%" height="50%"  />
+generated" width="75%" height="75%"  />
 
 3.  Open 2.deploy-model.ipynb notebook and run all cells.
 
