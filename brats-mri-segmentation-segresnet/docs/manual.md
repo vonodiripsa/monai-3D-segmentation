@@ -153,7 +153,7 @@ like the one saved in ginthub.
 <img src="media/image6.png" alt="Graphical user interface, application Description automatically
 generated" width="35%" height="35%"  />
 
-## Running 2.deploy-model.ipynb 
+## Running 2.deploy-model.ipynb notebook
 
 As prerequisites you have to successfully finish
 1.load-train-model.ipynb notebook.
@@ -191,4 +191,15 @@ it is performed with specified timeout and using score.py
 
 Assign 100% of Endpoint traffic to the notebook deployment.
 
+
+## Running 3.test-model.ipynb notebook
+
+As prerequisites you have to successfully finish
+1.load-train-model.ipynb and 2.deploy-model.ipynb notebooks.
+
+The notebook logic is self-documentes. It sends a request to Azure ML Endpoint with trained model, 
+gets and visualize a responce demonstrating good match with ground truth segmentation 
+
+<img src="media/image10.png" alt="Graphical user interface, application Description automatically
+generated" width="50%" height="50%"  />
 
