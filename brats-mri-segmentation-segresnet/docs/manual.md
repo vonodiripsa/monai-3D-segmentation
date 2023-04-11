@@ -69,7 +69,7 @@ your workspace.
     asset](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-create-data-assets?view=azureml-api-2&tabs=Studio)
     (file type) using "From Azure storage" option.
 
-## Running the tutorial 
+## Running 1.load-train-model.ipynb 
 
 1.  To run the tutorial, you need to go open the first notebook
 
