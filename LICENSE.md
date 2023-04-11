@@ -1,5 +1,4 @@
-# monai-3D-segmentation
-MONAI image processing pipelines on Azure ML
+# MONAI 3D segmentation tutorial and processing pipelines on Azure ML
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
