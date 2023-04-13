@@ -196,6 +196,10 @@ it is performed with specified timeout and using score.py
 
 Assign 100% of Endpoint traffic to the notebook deployment.
 
+> **NOTES:**
+>
+>Make sure Endpoint name is unique for the region
+
 
 ## Running 3.test-model.ipynb notebook
 
