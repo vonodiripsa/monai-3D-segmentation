@@ -149,6 +149,11 @@ like the one saved in ginthub.
 >
 >By the way, the result model will be saved together with other outputs
 >in model folder
+>
+>Make sure training environment name is matching environment name in .yaml
+>file for used environment
+
+
 
 <img src="media/image6.png" alt="Graphical user interface, application Description automatically
 generated" width="35%" height="35%"  />
