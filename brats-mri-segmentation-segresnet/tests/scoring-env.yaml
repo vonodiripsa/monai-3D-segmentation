@@ -10,7 +10,12 @@ dependencies:
   - mlflow==1.26.0
   - pip==21.2.4
   - pip:
+      - azureml-inference-server-http
       - azure-ai-ml==1.2.0
       - azureml-mlflow==1.48.0
+      - 'monai[nibabel, ignite, tqdm]'
+      - numpy
       - tensorboard
+      - scikit-learn
       - matplotlib
+      - inference-schema
